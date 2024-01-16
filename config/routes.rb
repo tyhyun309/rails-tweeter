@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   #resources :profiles
   #resources :likes, only: :create
 
-  #devise_for :users
+  devise_for :users
   root to: "tweets#index"
 end
