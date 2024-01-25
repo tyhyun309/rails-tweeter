@@ -12,6 +12,9 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       if @tweet.save
+        format.html do
+          redirect_to root_path
+        end
         format.turbo_stream
       else
         format.html do
@@ -20,6 +23,7 @@ class TweetsController < ApplicationController
         end
       end
     end
+
   end
 
   def show
